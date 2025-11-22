@@ -1,0 +1,258 @@
+const WORK_LOCATION = {
+  id: 1,
+  name: "Work",
+  icon: "/icons/work.svg",
+  kind: "folder",
+  children: [
+    // ▶ Project 1 — DevOps Demo Project
+    {
+      id: 5,
+      name: "DevOps Demo Application",
+      icon: "/images/folder.png",
+      kind: "folder",
+      position: "top-10 left-5",
+      windowPosition: "top-[5vh] left-5",
+      children: [
+        {
+          id: 1,
+          name: "DevOps Demo Project.txt",
+          icon: "/images/txt.png",
+          kind: "file",
+          fileType: "txt",
+          position: "top-5 left-10",
+          description: [
+            "This DevOps Demo project showcases complete CI/CD automation, infrastructure provisioning, and deployment workflows.",
+            "It demonstrates modern DevOps principles including Dockerization, GitHub Actions pipelines, environment promotion, and monitoring.",
+            "Think of it as a practical real-world DevOps setup—showing how code moves from development to production automatically.",
+            "Built with Next.js, deployed using containerization, automated pipelines, and cloud orchestration.",
+          ],
+        },
+        {
+          id: 2,
+          name: "devops-demo.com",
+          icon: "/images/safari.png",
+          kind: "file",
+          fileType: "url",
+          href: "https://devops-proj.vercel.app/",
+          position: "top-10 right-20",
+        },
+        {
+          id: 4,
+          name: "devops-demo.png",
+          icon: "/images/image.png",
+          kind: "file",
+          fileType: "img",
+          position: "top-52 right-80",
+          imageUrl: "/images/devops.png",
+        },
+      ],
+    },
+
+    // ▶ Project 2 — Paylert
+    {
+      id: 6,
+      name: "Paylert - Budgeting & Accounting App",
+      icon: "/images/folder.png",
+      kind: "folder",
+      position: "top-52 right-80",
+      windowPosition: "top-[20vh] left-7",
+      children: [
+        {
+          id: 1,
+          name: "Paylert Project.txt",
+          icon: "/images/txt.png",
+          kind: "file",
+          fileType: "txt",
+          position: "top-5 right-10",
+          description: [
+            "Paylert is a full-stack finance and accounting system built for solo entrepreneurs to track expenses, reminders, savings, credit cards, and FDs.",
+            "It includes real-time dashboards, analytics, Google OAuth, double-entry accounting, invoice automation, and a personal AI chatbot.",
+            "Think of it as a modern Tally alternative—clean UI, smart automation, and powerful financial insights.",
+            "Built with React 19, Node.js, Express, PostgreSQL, raw SQL, JWT cookies, Zustand, and shadcn/ui.",
+          ],
+        },
+        {
+          id: 2,
+          name: "paylert.com",
+          icon: "/images/safari.png",
+          kind: "file",
+          fileType: "url",
+          href: "#",
+          position: "top-20 left-20",
+        },
+        {
+          id: 4,
+          name: "paylert.png",
+          icon: "/images/image.png",
+          kind: "file",
+          fileType: "img",
+          position: "top-52 left-80",
+          imageUrl: "/images/paylert-demo.png",
+        },
+      ],
+    },
+
+    // ▶ Project 3 — Inverse-Transverse Wavelet Scrambling
+    {
+      id: 7,
+      name: "Inverse-Transverse Wavelet Scrambling App",
+      icon: "/images/folder.png",
+      kind: "folder",
+      position: "top-10 left-80",
+      windowPosition: "top-[33vh] left-7",
+      children: [
+        {
+          id: 1,
+          name: "ITWS Encryption Project.txt",
+          icon: "/images/txt.png",
+          kind: "file",
+          fileType: "txt",
+          position: "top-5 left-10",
+          description: [
+            "A MERN-based encryption and scrambling system using inverse-transverse wavelet transform techniques.",
+            "Instead of basic hashing or AES-like systems, this uses mathematical wavelet transformations for image + image scrambling.",
+            "Think of it like deep-layer secure encoding—complex, nearly irreversible transformations that protect sensitive content.",
+            "Built with React, Node.js, Express, MongoDB, and custom-novel encryption algorithms.",
+          ],
+        },
+        {
+          id: 2,
+          name: "wavelet-app.com",
+          icon: "/images/safari.png",
+          kind: "file",
+          fileType: "url",
+          href: "#",
+          position: "top-10 right-20",
+        },
+        {
+          id: 4,
+          name: "wavelet.png",
+          icon: "/images/image.png",
+          kind: "file",
+          fileType: "img",
+          position: "top-52 right-80",
+          imageUrl: "/images/#", //need to insert image here.
+        },
+      ],
+    },
+  ],
+};
+const RESUME_LOCATION = {
+  id: 3,
+  type: "resume",
+  name: "Resume",
+  icon: "/icons/file.svg",
+  kind: "folder",
+  children: [
+    {
+      id: 1,
+      name: "Resume.pdf",
+      icon: "/images/pdf.png",
+      kind: "file",
+      fileType: "pdf",
+      // you can add `href` if you want to open a hosted resume
+      // href: "/your/resume/path.pdf",
+    },
+  ],
+};
+const ABOUT_LOCATION = {
+  id: 2,
+  type: "about",
+  name: "About me",
+  icon: "/icons/info.svg",
+  kind: "folder",
+  children: [
+    {
+      id: 1,
+      name: "me.jpg",
+      icon: "/images/image.png",
+      kind: "file",
+      fileType: "img",
+      position: "top-10 left-5",
+      imageUrl: "/images/adrian.jpg",
+    },
+    {
+      id: 2,
+      name: "me-2.jpg",
+      icon: "/images/image.png",
+      kind: "file",
+      fileType: "img",
+      position: "top-28 right-72",
+      imageUrl: "/images/adrian-2.jpg",
+    },
+    {
+      id: 4, //need to update
+      name: "about-me.txt",
+      icon: "/images/txt.png",
+      kind: "file",
+      fileType: "txt",
+      position: "top-60 left-5",
+      subtitle: "Meet the Developer Behind the Code",
+      image: "/images/me.jpg",
+      description: [
+        "Hey! I’m Nikunj 👋, a web developer who enjoys building sleek, interactive websites that actually work well.",
+        "I specialize in JavaScript, React, and Next.js—and I love making things feel smooth, fast, and just a little bit delightful.",
+        "I’m big on clean UI, good UX, and writing code that doesn’t need a search party to debug.",
+        "Outside of dev work, you'll find me tweaking layouts at 2AM, sipping overpriced coffee, or impulse-buying gadgets I absolutely convinced myself I needed 😅",
+      ],
+    },
+  ],
+};
+const TRASH_LOCATION = {
+  id: 4,
+  type: "trash",
+  name: "Trash",
+  icon: "/icons/trash.svg",
+  kind: "folder",
+  children: [
+    {
+      id: 1,
+      name: "trash1.png",
+      icon: "/images/image.png",
+      kind: "file",
+      fileType: "img",
+      position: "top-10 left-10",
+      imageUrl: "/images/trash-1.png",
+    },
+    {
+      id: 2,
+      name: "trash2.png",
+      icon: "/images/image.png",
+      kind: "file",
+      fileType: "img",
+      position: "top-40 left-80",
+      imageUrl: "/images/trash-2.png",
+    },
+  ],
+};
+
+export const locations = {
+  work: WORK_LOCATION,
+  resume: RESUME_LOCATION,
+  about: ABOUT_LOCATION,
+  trash: TRASH_LOCATION,
+};
+
+export const socials = [
+  {
+    id: 1,
+    text: "Github",
+    icon: "/icons/github.svg",
+    bg: "#f4656b",
+    link: "https://github.com/ctrl-nikunj",
+  },
+  {
+    id: 3,
+    text: "Instagram",
+    icon: "/icons/instagram.svg",
+    bg: "#ff866b",
+    link: "https://www.instagram.com/iamnikunjgoyal",
+  },
+  {
+    id: 4,
+    text: "LinkedIn",
+    icon: "/icons/linkedin.svg",
+    bg: "#05b6f6",
+    link: "https://www.linkedin.com/in/ctrlnikunjgoyal001",
+  },
+];
