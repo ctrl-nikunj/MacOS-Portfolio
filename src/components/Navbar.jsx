@@ -4,7 +4,7 @@ import { getAssetPath } from "@/utils/helpers";
 
 export default function Navbar() {
   const data = [
-    { id: 1, name: "Projects", type: "projects" },
+    { id: 1, name: "Projects", type: "finder" },
     { id: 2, name: "Contact", type: "contacts" },
     { id: 3, name: "Resume", type: "resume" },
   ];
