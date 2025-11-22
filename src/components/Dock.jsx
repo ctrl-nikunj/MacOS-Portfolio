@@ -77,12 +77,6 @@ export default function Dock() {
       canOpen: true,
     },
     {
-      id: "photos",
-      name: "Gallery",
-      icon: "/images/photos.png",
-      canOpen: true,
-    },
-    {
       id: "safari",
       name: "Articles",
       icon: "/images/safari.png",

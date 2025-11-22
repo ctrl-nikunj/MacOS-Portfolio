@@ -11,7 +11,7 @@ const WORK_LOCATION = {
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-10 left-5",
-      windowPosition: "top-[5vh] left-5",
+      windowPosition: "top-[50vh] left-50",
       children: [
         {
           id: 1,
@@ -55,7 +55,7 @@ const WORK_LOCATION = {
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-52 right-80",
-      windowPosition: "top-[20vh] left-7",
+      windowPosition: "top-[20vh] right-10",
       children: [
         {
           id: 1,
@@ -99,7 +99,7 @@ const WORK_LOCATION = {
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-10 left-80",
-      windowPosition: "top-[33vh] left-7",
+      windowPosition: "top-[50vh] right-40",
       children: [
         {
           id: 1,
@@ -169,7 +169,7 @@ const ABOUT_LOCATION = {
       kind: "file",
       fileType: "img",
       position: "top-10 left-5",
-      imageUrl: "/images/adrian.jpg",
+      imageUrl: "/images/me.jpg",
     },
     {
       id: 2,
@@ -178,7 +178,7 @@ const ABOUT_LOCATION = {
       kind: "file",
       fileType: "img",
       position: "top-28 right-72",
-      imageUrl: "/images/adrian-2.jpg",
+      imageUrl: "/images/me-2.jpg",
     },
     {
       id: 4, //need to update
@@ -190,10 +190,10 @@ const ABOUT_LOCATION = {
       subtitle: "Meet the Developer Behind the Code",
       image: "/images/me.jpg",
       description: [
-        "Hey! I’m Nikunj 👋, a web developer who enjoys building sleek, interactive websites that actually work well.",
-        "I specialize in JavaScript, React, and Next.js—and I love making things feel smooth, fast, and just a little bit delightful.",
+        "Hey! I’m Nikunj 👋, a MERN stack web developer who enjoys building sleek, interactive websites that actually work well with a smooth user experience.",
+        "I specialize in JavaScript, TypeScript, React, Next.js and Node.js—and I love making things feel smooth, fast, and just a little bit delightful.",
         "I’m big on clean UI, good UX, and writing code that doesn’t need a search party to debug.",
-        "Outside of dev work, you'll find me tweaking layouts at 2AM, sipping overpriced coffee, or impulse-buying gadgets I absolutely convinced myself I needed 😅",
+        "Outside of dev work, you'll find me with earphones on, jamming to my favourite musicians, or going through the latest tech and automotive trends..",
       ],
     },
   ],

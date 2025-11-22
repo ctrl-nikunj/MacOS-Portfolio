@@ -76,6 +76,7 @@ function Safari() {
           ))}
         </div>
         <h2>Blogs</h2>
+        <p className="text-center text-gray-600 text-lg">Coming Soon...</p>
       </div>
     </>
   );
