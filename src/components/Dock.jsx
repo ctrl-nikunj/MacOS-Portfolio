@@ -67,8 +67,6 @@ export default function Dock() {
     } else {
       openWindow(app.id);
     }
-
-    console.log(windows);
   };
 
   const dockApps = [
