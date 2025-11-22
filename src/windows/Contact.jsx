@@ -1,6 +1,7 @@
 import WindowControls from "@/components/WindowControls";
 import WindowWrapper from "@/hoc/WindowWrapper";
 import { socials } from "@/constants";
+import { getAssetPath } from "@/utils/helpers";
 
 function Contact() {
   return (
@@ -11,7 +12,7 @@ function Contact() {
       </div>
       <div className="p-5 space-y-5 ">
         <img
-          src="/images/Profile.jpg"
+          src={getAssetPath("/images/Profile.jpg")}
           alt="That's me!"
           className="rounded-full w-20 h-20"
         />

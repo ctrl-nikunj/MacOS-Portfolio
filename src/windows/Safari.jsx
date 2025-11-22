@@ -1,5 +1,6 @@
 import WindowControls from "@/components/WindowControls";
 import WindowWrapper from "@/hoc/WindowWrapper";
+import { getAssetPath } from "@/utils/helpers";
 import {
   ChevronLeft,
   ChevronRight,
@@ -17,13 +18,13 @@ function Safari() {
       id: 1,
       name: "Endless Horse",
       link: "http://endless.horse/",
-      image: "/images/horse.jpg",
+      image: getAssetPath("/images/horse.jpg"),
     },
     {
       id: 2,
       name: "A Live DevOps Demo Project",
       link: "https://devops-proj.vercel.app/",
-      image: "/images/devops.png",
+      image: getAssetPath("/images/devops.png"),
     },
   ];
   return (

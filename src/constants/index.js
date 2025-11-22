@@ -1,14 +1,16 @@
+import { getAssetPath } from "@/utils/helpers";
+
 const WORK_LOCATION = {
   id: 1,
   name: "Work",
-  icon: "/icons/work.svg",
+  icon: getAssetPath("/icons/work.svg"),
   kind: "folder",
   children: [
     // ▶ Project 1 — DevOps Demo Project
     {
       id: 5,
       name: "DevOps Demo Application",
-      icon: "/images/folder.png",
+      icon: getAssetPath("/images/folder.png"),
       kind: "folder",
       position: "top-10 left-5",
       windowPosition: "top-[50vh] left-50",
@@ -16,7 +18,7 @@ const WORK_LOCATION = {
         {
           id: 1,
           name: "DevOps Demo Project.txt",
-          icon: "/images/txt.png",
+          icon: getAssetPath("/images/txt.png"),
           kind: "file",
           fileType: "txt",
           position: "top-5 left-10",
@@ -30,7 +32,7 @@ const WORK_LOCATION = {
         {
           id: 2,
           name: "devops-demo.com",
-          icon: "/images/safari.png",
+          icon: getAssetPath("/images/safari.png"),
           kind: "file",
           fileType: "url",
           href: "https://devops-proj.vercel.app/",
@@ -39,11 +41,11 @@ const WORK_LOCATION = {
         {
           id: 4,
           name: "devops-demo.png",
-          icon: "/images/image.png",
+          icon: getAssetPath("/images/image.png"),
           kind: "file",
           fileType: "img",
           position: "top-52 right-80",
-          imageUrl: "/images/devops.png",
+          imageUrl: getAssetPath("/images/devops.png"),
         },
       ],
     },
@@ -52,7 +54,7 @@ const WORK_LOCATION = {
     {
       id: 6,
       name: "Paylert - Budgeting & Accounting App",
-      icon: "/images/folder.png",
+      icon: getAssetPath("/images/folder.png"),
       kind: "folder",
       position: "top-52 right-80",
       windowPosition: "top-[20vh] right-10",
@@ -60,7 +62,7 @@ const WORK_LOCATION = {
         {
           id: 1,
           name: "Paylert Project.txt",
-          icon: "/images/txt.png",
+          icon: getAssetPath("/images/txt.png"),
           kind: "file",
           fileType: "txt",
           position: "top-5 right-10",
@@ -74,7 +76,7 @@ const WORK_LOCATION = {
         {
           id: 2,
           name: "paylert.com",
-          icon: "/images/safari.png",
+          icon: getAssetPath("/images/safari.png"),
           kind: "file",
           fileType: "url",
           href: "#",
@@ -83,11 +85,11 @@ const WORK_LOCATION = {
         {
           id: 4,
           name: "paylert.png",
-          icon: "/images/image.png",
+          icon: getAssetPath("/images/image.png"),
           kind: "file",
           fileType: "img",
           position: "top-52 left-80",
-          imageUrl: "/images/paylert-demo.png",
+          imageUrl: getAssetPath("/images/paylert-demo.png"),
         },
       ],
     },
@@ -96,7 +98,7 @@ const WORK_LOCATION = {
     {
       id: 7,
       name: "Inverse-Transverse Wavelet Scrambling App",
-      icon: "/images/folder.png",
+      icon: getAssetPath("/images/folder.png"),
       kind: "folder",
       position: "top-10 left-80",
       windowPosition: "top-[50vh] right-40",
@@ -104,7 +106,7 @@ const WORK_LOCATION = {
         {
           id: 1,
           name: "ITWS Encryption Project.txt",
-          icon: "/images/txt.png",
+          icon: getAssetPath("/images/txt.png"),
           kind: "file",
           fileType: "txt",
           position: "top-5 left-10",
@@ -118,7 +120,7 @@ const WORK_LOCATION = {
         {
           id: 2,
           name: "wavelet-app.com",
-          icon: "/images/safari.png",
+          icon: getAssetPath("/images/safari.png"),
           kind: "file",
           fileType: "url",
           href: "#",
@@ -127,11 +129,11 @@ const WORK_LOCATION = {
         {
           id: 4,
           name: "wavelet.png",
-          icon: "/images/image.png",
+          icon: getAssetPath("/images/image.png"),
           kind: "file",
           fileType: "img",
           position: "top-52 right-80",
-          imageUrl: "/images/#", //need to insert image here.
+          imageUrl: getAssetPath("/images/#"), //need to insert image here.
         },
       ],
     },
@@ -141,13 +143,13 @@ const RESUME_LOCATION = {
   id: 3,
   type: "resume",
   name: "Resume",
-  icon: "/icons/file.svg",
+  icon: getAssetPath("/icons/file.svg"),
   kind: "folder",
   children: [
     {
       id: 1,
       name: "Resume.pdf",
-      icon: "/images/pdf.png",
+      icon: getAssetPath("/images/pdf.png"),
       kind: "file",
       fileType: "pdf",
       // you can add `href` if you want to open a hosted resume
@@ -159,36 +161,36 @@ const ABOUT_LOCATION = {
   id: 2,
   type: "about",
   name: "About me",
-  icon: "/icons/info.svg",
+  icon: getAssetPath("/icons/info.svg"),
   kind: "folder",
   children: [
     {
       id: 1,
       name: "me.jpg",
-      icon: "/images/image.png",
+      icon: getAssetPath("/images/image.png"),
       kind: "file",
       fileType: "img",
       position: "top-10 left-5",
-      imageUrl: "/images/me.jpg",
+      imageUrl: getAssetPath("/images/me.jpg"),
     },
     {
       id: 2,
       name: "me-2.jpg",
-      icon: "/images/image.png",
+      icon: getAssetPath("/images/image.png"),
       kind: "file",
       fileType: "img",
       position: "top-28 right-72",
-      imageUrl: "/images/me-2.jpg",
+      imageUrl: getAssetPath("/images/me-2.jpg"),
     },
     {
       id: 4, //need to update
       name: "about-me.txt",
-      icon: "/images/txt.png",
+      icon: getAssetPath("/images/txt.png"),
       kind: "file",
       fileType: "txt",
       position: "top-60 left-5",
       subtitle: "Meet the Developer Behind the Code",
-      image: "/images/me.jpg",
+      image: getAssetPath("/images/me.jpg"),
       description: [
         "Hey! I’m Nikunj 👋, a MERN stack web developer who enjoys building sleek, interactive websites that actually work well with a smooth user experience.",
         "I specialize in JavaScript, TypeScript, React, Next.js and Node.js—and I love making things feel smooth, fast, and just a little bit delightful.",
@@ -202,26 +204,26 @@ const TRASH_LOCATION = {
   id: 4,
   type: "trash",
   name: "Trash",
-  icon: "/icons/trash.svg",
+  icon: getAssetPath("/icons/trash.svg"),
   kind: "folder",
   children: [
     {
       id: 1,
       name: "trash1.png",
-      icon: "/images/image.png",
+      icon: getAssetPath("/images/image.png"),
       kind: "file",
       fileType: "img",
       position: "top-10 left-10",
-      imageUrl: "/images/trash-1.png",
+      imageUrl: getAssetPath("/images/trash-1.png"),
     },
     {
       id: 2,
       name: "trash2.png",
-      icon: "/images/image.png",
+      icon: getAssetPath("/images/image.png"),
       kind: "file",
       fileType: "img",
       position: "top-40 left-80",
-      imageUrl: "/images/trash-2.png",
+      imageUrl: getAssetPath("/images/trash-2.png"),
     },
   ],
 };
@@ -237,21 +239,21 @@ export const socials = [
   {
     id: 1,
     text: "Github",
-    icon: "/icons/github.svg",
+    icon: getAssetPath("/icons/github.svg"),
     bg: "#f4656b",
     link: "https://github.com/ctrl-nikunj",
   },
   {
     id: 3,
     text: "Instagram",
-    icon: "/icons/instagram.svg",
+    icon: getAssetPath("/icons/instagram.svg"),
     bg: "#ff866b",
     link: "https://www.instagram.com/iamnikunjgoyal",
   },
   {
     id: 4,
     text: "LinkedIn",
-    icon: "/icons/linkedin.svg",
+    icon: getAssetPath("/icons/linkedin.svg"),
     bg: "#05b6f6",
     link: "https://www.linkedin.com/in/ctrlnikunjgoyal001",
   },

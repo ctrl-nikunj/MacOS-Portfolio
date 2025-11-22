@@ -1,5 +1,6 @@
 import useWindowStore from "@/store/window";
 import dayjs from "dayjs";
+import { getAssetPath } from "@/utils/helpers";
 
 export default function Navbar() {
   const data = [
@@ -9,10 +10,10 @@ export default function Navbar() {
   ];
 
   const navIcons = [
-    { id: 3, icon: "/icons/wifi.svg" },
-    { id: 2, icon: "/icons/search.svg" },
-    { id: 4, icon: "/icons/user.svg" },
-    { id: 1, icon: "/icons/mode.svg" },
+    { id: 3, icon: getAssetPath("/icons/wifi.svg") },
+    { id: 2, icon: getAssetPath("/icons/search.svg") },
+    { id: 4, icon: getAssetPath("/icons/user.svg") },
+    { id: 1, icon: getAssetPath("/icons/mode.svg") },
   ];
 
   const { openWindow } = useWindowStore();
@@ -20,7 +21,7 @@ export default function Navbar() {
   return (
     <nav>
       <div>
-        <img src="/images/logo.svg" />
+        <img src={getAssetPath("/images/logo.svg")} />
         <p className="font-semibold hidden md:block">Nikunj's Portfolio</p>
         <ul>
           {data.map((item) => (

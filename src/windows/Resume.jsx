@@ -1,5 +1,6 @@
 import WindowControls from "@/components/WindowControls";
 import WindowWrapper from "@/hoc/WindowWrapper";
+import { getAssetPath } from "@/utils/helpers";
 import { Download } from "lucide-react";
 import { pdfjs, Document, Page } from "react-pdf";
 import "react-pdf/dist/Page/AnnotationLayer.css";
@@ -17,7 +18,7 @@ function Resume() {
         <WindowControls target="resume" />
         <h2>Resume</h2>
         <a
-          href="/files/NikunjGoyal_Full_Stack_MERN_PERN.pdf"
+          href={getAssetPath("/files/NikunjGoyal_Full_Stack_MERN_PERN.pdf")}
           download
           className="cursor-pointer"
           title="Download Resume"
@@ -25,7 +26,9 @@ function Resume() {
           <Download size={15} className="icon" />
         </a>
       </div>
-      <Document file="/files/NikunjGoyal_Full_Stack_MERN_PERN.pdf">
+      <Document
+        file={getAssetPath("/files/NikunjGoyal_Full_Stack_MERN_PERN.pdf")}
+      >
         <Page pageNumber={1} renderTextLayer renderAnnotationLayer />
       </Document>
     </>

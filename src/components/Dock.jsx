@@ -1,4 +1,5 @@
 import useWindowStore from "@/store/window";
+import { getAssetPath } from "@/utils/helpers";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useRef } from "react";
@@ -73,32 +74,32 @@ export default function Dock() {
     {
       id: "finder",
       name: "Finder",
-      icon: "/images/finder.png",
+      icon: getAssetPath("/images/finder.png"),
       canOpen: true,
     },
     {
       id: "safari",
       name: "Articles",
-      icon: "/images/safari.png",
+      icon: getAssetPath("/images/safari.png"),
       canOpen: true,
     },
     {
       id: "contacts",
       name: "Contact",
-      icon: "/images/contact.png",
+      icon: getAssetPath("/images/contact.png"),
       canOpen: true,
     },
     {
       id: "terminal",
-      name: "Terminal",
-      icon: "/images/terminal.png",
+      name: "Tech Stack",
+      icon: getAssetPath("/images/terminal.png"),
       canOpen: true,
     },
     {
       id: "trash",
-      name: "Archives",
-      icon: "/images/trash.png",
-      canOpen: false,
+      name: "Trash",
+      icon: getAssetPath("/images/trash.png"),
+      canOpen: true,
     },
   ];
   return (
