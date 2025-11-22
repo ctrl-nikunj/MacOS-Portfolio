@@ -1,18 +1,71 @@
-# React + Vite
+# Portfolio OS 🖥️
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A highly interactive, macOS-inspired portfolio website built with **React**, **Vite**, and **TailwindCSS**. This project simulates a desktop environment where users can explore my work, skills, and resume through a window-based interface.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Desktop Environment**: Fully functional desktop with draggable icons, a dock, and a navigation bar.
+- **Window System**: Open, close, minimize, and maximize windows. Supports multiple open windows with active focus management (z-index).
+- **Finder**: Navigate through a simulated file system to explore projects ("Work"), "About Me", and "Resume".
+- **Applications**:
+  - **Terminal**: Displays tech stack and skills in a developer-friendly format.
+  - **Safari**: A browser simulation to preview live projects and websites.
+  - **Text Editor**: Read project descriptions and personal bio.
+  - **Image Viewer**: View project screenshots and personal photos.
+  - **Resume**: Integrated PDF viewer to read and download my resume.
+  - **Contact**: Quick access to social links (GitHub, LinkedIn, Instagram).
+- **Animations**: Smooth transitions and draggable elements powered by **GSAP**.
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- **Frontend Framework**: [React 19](https://react.dev/)
+- **Build Tool**: [Vite](https://vitejs.dev/)
+- **Styling**: [TailwindCSS v4](https://tailwindcss.com/)
+- **State Management**: [Zustand](https://zustand-demo.pmnd.rs/) + Immer
+- **Animations**: [GSAP](https://greensock.com/gsap/) (GreenSock Animation Platform)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **PDF Rendering**: [React-PDF](https://github.com/wojtekmaj/react-pdf)
 
-Note: This will impact Vite dev & build performances.
+## 📂 Projects Showcased
 
-## Expanding the ESLint configuration
+1.  **DevOps Demo Application**: CI/CD automation, Dockerization, and cloud orchestration.
+2.  **Paylert**: A full-stack finance and budgeting app for solo entrepreneurs.
+3.  **Inverse-Transverse Wavelet Scrambling**: Advanced encryption system using mathematical wavelet transformations.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📦 Installation & Running
+
+1.  **Clone the repository**
+
+    ```bash
+    git clone https://github.com/ctrl-nikunj/portfolio.git
+    cd portfolio
+    ```
+
+2.  **Install dependencies**
+
+    ```bash
+    npm install
+    ```
+
+3.  **Run the development server**
+
+    ```bash
+    npm run dev
+    ```
+
+4.  **Build for production**
+    ```bash
+    npm run build
+    ```
+
+## 👤 Author
+
+**Nikunj Goyal**
+
+- **GitHub**: [@ctrl-nikunj](https://github.com/ctrl-nikunj)
+- **LinkedIn**: [Nikunj Goyal](https://www.linkedin.com/in/ctrlnikunjgoyal001)
+- **Instagram**: [@iamnikunjgoyal](https://www.instagram.com/iamnikunjgoyal)
+
+---
+
+_Built with ❤️ and a lot of caffeine._

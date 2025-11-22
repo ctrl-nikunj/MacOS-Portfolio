@@ -20,4 +20,16 @@ export default defineConfig({
       "@": resolve(__dirname, "src"),
     },
   },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ["react", "react-dom"],
+          gsap: ["gsap", "@gsap/react"],
+          pdf: ["react-pdf"],
+          ui: ["lucide-react", "clsx", "dayjs"],
+        },
+      },
+    },
+  },
 });
