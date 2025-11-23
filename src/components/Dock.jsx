@@ -62,7 +62,6 @@ export default function Dock() {
     if (app.id === "trash") {
       if (windows.finder.isOpen && activeLocation?.id === locations.trash.id) {
         closeWindow("finder");
-        setActiveLocation(locations.work);
       } else {
         setActiveLocation(locations.trash);
         openWindow("finder");
@@ -84,6 +83,7 @@ export default function Dock() {
         closeWindow(app.id);
       }
     } else {
+      app.id === "finder" ? setActiveLocation(locations.work) : null;
       openWindow(app.id);
     }
   };
