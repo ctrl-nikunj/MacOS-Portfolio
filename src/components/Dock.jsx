@@ -9,7 +9,7 @@ import { locations } from "@/constants";
 
 export default function Dock() {
   const dockRef = useRef(null);
-  const { setActiveLocation } = useLocationStore();
+  const { activeLocation, setActiveLocation } = useLocationStore();
   const { openWindow, closeWindow, windows } = useWindowStore();
 
   useGSAP(() => {
@@ -59,6 +59,17 @@ export default function Dock() {
   const toggleApp = (app) => {
     if (!app.canOpen) return () => {};
 
+    if (app.id === "trash") {
+      if (windows.finder.isOpen && activeLocation?.id === locations.trash.id) {
+        closeWindow("finder");
+        setActiveLocation(locations.work);
+      } else {
+        setActiveLocation(locations.trash);
+        openWindow("finder");
+      }
+      return;
+    }
+
     const window = windows[app.id];
 
     if (!window) {
@@ -67,14 +78,13 @@ export default function Dock() {
     }
 
     if (window.isOpen) {
-      closeWindow(app.id);
-    } else {
-      if (app.id === "trash") {
-        setActiveLocation(locations.trash);
-        openWindow("finder");
+      if (activeLocation?.id !== locations.work.id) {
+        setActiveLocation(locations.work);
       } else {
-        openWindow(app.id);
+        closeWindow(app.id);
       }
+    } else {
+      openWindow(app.id);
     }
   };
 
