@@ -57,7 +57,7 @@ function Finder() {
               className={item.position}
               onClick={() => openItem(item)}
             >
-              <img src={item.icon} alt="item.name" />
+              <img src={item.icon} alt={item.name} />
               <p>{item.name}</p>
             </li>
           ))}

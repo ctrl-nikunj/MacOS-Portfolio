@@ -1,12 +1,15 @@
 import useWindowStore from "@/store/window";
+import useLocationStore from "@/store/location";
 import { getAssetPath } from "@/utils/helpers";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useRef } from "react";
 import { Tooltip } from "react-tooltip";
+import { locations } from "@/constants";
 
 export default function Dock() {
   const dockRef = useRef(null);
+  const { setActiveLocation } = useLocationStore();
   const { openWindow, closeWindow, windows } = useWindowStore();
 
   useGSAP(() => {
@@ -66,7 +69,12 @@ export default function Dock() {
     if (window.isOpen) {
       closeWindow(app.id);
     } else {
-      openWindow(app.id);
+      if (app.id === "trash") {
+        setActiveLocation(locations.trash);
+        openWindow("finder");
+      } else {
+        openWindow(app.id);
+      }
     }
   };
 

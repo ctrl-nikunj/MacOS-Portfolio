@@ -17,14 +17,14 @@ function Contact() {
           className="rounded-full w-20 h-20"
         />
 
-        <h3>Hey!!! Let's Connect</h3>
+        <h3>Hey!! Let's Connect..</h3>
         <p>
           Building something? Breaking something? Curious about something? Let’s
           chat.
         </p>
         <ul>
           {socials.map(({ id, text, icon, bg, link }) => (
-            <li key={id} style={{ backgroundColor: bg }}>
+            <li key={id} className={bg}>
               <a href={link} target="_blank" rel="noopener noreferrer">
                 <img src={icon} alt={text} className="size-5" />
                 <p>{text}</p>
