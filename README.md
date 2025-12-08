@@ -28,7 +28,7 @@ A highly interactive, macOS-inspired portfolio website built with **React**, **V
 
 ## 📂 Projects Showcased
 
-1.  **DevOps Demo Application**: CI/CD automation, Dockerization, and cloud orchestration.
+1.  **Notion Powered Blog**: A full-stack blog application built with Next.js, TailwindCSS, and Notion API.
 2.  **Paylert**: A full-stack finance and budgeting app for solo entrepreneurs.
 3.  **Inverse-Transverse Wavelet Scrambling**: Advanced encryption system using mathematical wavelet transformations.
 
