@@ -37,7 +37,7 @@ A highly interactive, macOS-inspired portfolio website built with **React**, **V
 1.  **Clone the repository**
 
     ```bash
-    git clone https://github.com/ctrl-nikunj/portfolio.git
+    git clone https://github.com/ctrl-nikunj/MacOS-Portfolio.git
     cd portfolio
     ```
 
