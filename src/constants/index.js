@@ -109,19 +109,18 @@ const WORK_LOCATION = {
           fileType: "txt",
           position: "top-5 left-10",
           description: [
-            "A MERN-based encryption and scrambling system using inverse-transverse wavelet transform techniques.",
-            "Instead of basic hashing or AES-like systems, this uses mathematical wavelet transformations for image + image scrambling.",
-            "Think of it like deep-layer secure encoding—complex, nearly irreversible transformations that protect sensitive content.",
-            "Built with React, Node.js, Express, MongoDB, and custom-novel encryption algorithms.",
+            "Developed a self-contained Next.js web application that performs secure image hiding and retrieval using a custom DWT + DCT + inverse—transpose pixel scrambling steganography algorithm.",
+            "Implemented all processing through Next.js API routes and in-app with no external backend or database, enabling fast clientdriven embedding and extraction workflows.",
+            "Designed an intuitive interface for uploading, embedding, extracting, and downloading images, making the complex steganographic pipeline accessible to end-users.",
           ],
         },
         {
           id: 2,
-          name: "wavelet-app.com",
+          name: "itws-mern.vercel.app",
           icon: getAssetPath("/images/safari.png"),
           kind: "file",
           fileType: "url",
-          href: "#",
+          href: "https://itws-mern.vercel.app/",
           position: "top-10 right-20",
         },
         {
@@ -131,7 +130,7 @@ const WORK_LOCATION = {
           kind: "file",
           fileType: "img",
           position: "top-52 right-80",
-          imageUrl: getAssetPath("/images/#"), //need to insert image here.
+          imageUrl: getAssetPath("/images/wavelet.png"),
         },
       ],
     },
