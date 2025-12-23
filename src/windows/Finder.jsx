@@ -26,12 +26,12 @@ function Finder() {
         className={`${
           item.id === activeLocation.id
             ? theme === "dark"
-              ? "active-dark"
+              ? "active-dark "
               : "active"
             : "not-active"
-        } ${theme === "dark" ? "text-white" : "text-black"} hover:bg-zinc-${
-          theme === "dark" ? "500" : "200"
-        } transition-colors duration-400`}
+        } ${theme === "dark" ? "text-white" : "text-black"} 
+        ${theme === "dark" ? "hover:bg-zinc-600" : "hover:bg-zinc-200"} 
+        transition-colors duration-400`}
         onClick={() => setActiveLocation(item)}
       >
         <div className="flex items-center gap-2">
