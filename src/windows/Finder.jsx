@@ -88,7 +88,7 @@ function Finder() {
               className={`${item.position} ${
                 theme === "dark" ? "text-white" : "text-black"
               } hover:bg-zinc-${
-                theme === "dark" ? "500" : "200"
+                theme === "dark" ? "600" : "200"
               } py-2 rounded-lg transition-colors duration-400`}
               onClick={() => openItem(item)}
             >
