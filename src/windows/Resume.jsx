@@ -1,5 +1,6 @@
 import WindowControls from "@/components/WindowControls";
 import WindowWrapper from "@/hoc/WindowWrapper";
+import useThemeStore from "@/store/theme";
 import { getAssetPath } from "@/utils/helpers";
 import { Download } from "lucide-react";
 import { pdfjs, Document, Page } from "react-pdf";
@@ -9,9 +10,18 @@ import "react-pdf/dist/Page/TextLayer.css";
 pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
 function Resume() {
+  const { theme } = useThemeStore();
   return (
     <>
-      <div id="window-header">
+      <div
+        id="window-header"
+        className={
+          (theme === "dark"
+            ? "bg-zinc-600 border-b border-zinc-600"
+            : "bg-white border-b border-zinc-200") +
+          " transition-colors duration-400"
+        }
+      >
         <WindowControls target="resume" />
         <h2>Resume</h2>
         <a

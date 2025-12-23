@@ -5,6 +5,7 @@ import Dock from "@/components/Dock";
 import { Draggable } from "gsap/Draggable";
 import gsap from "gsap";
 import Home from "./windows/Home";
+import Snowfall from "react-snowfall";
 
 const Terminal = lazy(() => import("@/windows/Terminal"));
 const Safari = lazy(() => import("@/windows/Safari"));
@@ -19,6 +20,7 @@ gsap.registerPlugin(Draggable);
 function App() {
   return (
     <main>
+      <Snowfall />
       <Navbar />
       <Welcome />
       <Dock />

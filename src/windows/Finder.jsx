@@ -4,6 +4,7 @@ import { locations } from "@/constants/index";
 import useLocationStore from "@/store/location";
 import { Search } from "lucide-react";
 import useWindowStore from "@/store/window";
+import useThemeStore from "@/store/theme";
 
 function Finder() {
   const { openWindow } = useWindowStore();
@@ -22,7 +23,15 @@ function Finder() {
     items.map((item) => (
       <li
         key={item.id}
-        className={item.id === activeLocation.id ? "active" : "not-active"}
+        className={`${
+          item.id === activeLocation.id
+            ? theme === "dark"
+              ? "active-dark"
+              : "active"
+            : "not-active"
+        } ${theme === "dark" ? "text-white" : "text-black"} hover:bg-zinc-${
+          theme === "dark" ? "500" : "200"
+        } transition-colors duration-400`}
         onClick={() => setActiveLocation(item)}
       >
         <div className="flex items-center gap-2">
@@ -33,14 +42,32 @@ function Finder() {
         </div>
       </li>
     ));
+
+  const { theme } = useThemeStore();
+
   return (
     <>
-      <div id="window-header">
+      <div
+        id="window-header"
+        className={
+          (theme === "dark"
+            ? "bg-zinc-600 border-b border-zinc-600"
+            : "bg-white border-b border-zinc-200") +
+          " transition-colors duration-400"
+        }
+      >
         <WindowControls target="finder" />
         <Search className="icon" />
       </div>
       <div className="flex h-full bg-white">
-        <div className="sidebar">
+        <div
+          className={
+            "sidebar transition-colors duration-400 " +
+            (theme === "dark"
+              ? "bg-zinc-700 border-r border-zinc-600"
+              : "bg-white")
+          }
+        >
           <div>
             <h3>Favorites</h3>
             <ul>{renderList(Object.values(locations))}</ul>
@@ -50,11 +77,19 @@ function Finder() {
             <ul>{renderList(locations.work.children)}</ul>
           </div>
         </div>
-        <ul className="content">
+        <ul
+          className={`content ${
+            theme === "dark" ? "bg-zinc-700" : "bg-white"
+          } transition-colors duration-400`}
+        >
           {activeLocation?.children.map((item) => (
             <li
               key={item.id}
-              className={item.position}
+              className={`${item.position} ${
+                theme === "dark" ? "text-white" : "text-black"
+              } hover:bg-zinc-${
+                theme === "dark" ? "500" : "200"
+              } py-2 rounded-lg transition-colors duration-400`}
               onClick={() => openItem(item)}
             >
               <img src={item.icon} alt={item.name} />

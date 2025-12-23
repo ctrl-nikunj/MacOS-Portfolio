@@ -176,7 +176,7 @@ const ABOUT_LOCATION = {
       icon: getAssetPath("/images/image.png"),
       kind: "file",
       fileType: "img",
-      position: "top-28 right-72",
+      position: "top-28 right-20",
       imageUrl: getAssetPath("/images/me-2.jpg"),
     },
     {
@@ -251,7 +251,7 @@ export const socials = [
     id: 3,
     text: "Mail",
     icon: getAssetPath("/icons/email.svg"),
-    bg: "bg-gradient-to-b from-red-600 via-orange-400 to-yellow-500",
+    bg: "bg-gradient-to-br from-red-600 via-orange-400 to-yellow-500",
     link: "mailto:goyalnikunj2004@gmail.com",
   },
   {

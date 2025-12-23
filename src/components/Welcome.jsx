@@ -77,7 +77,7 @@ export default function Welcome() {
       <p ref={subtitleRef}>
         {renderText(
           "Hey! I am Nikunj. And this is my",
-          "text-2xl font-georama max-sm:text-xl",
+          "text-3xl font-georama max-sm:text-xl",
           100
         )}
       </p>
