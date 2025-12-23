@@ -13,6 +13,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   transition: filter 0.3s ease;
+  cursor: url("/public/icons/arrow.cur"),auto;
 }
 
 :global(.dark) body {
