@@ -1,3 +1,4 @@
+import useThemeStore from "@/store/theme";
 import useWindowStore from "@/store/window";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -55,8 +56,17 @@ export default function WindowWrapper(Component, windowKey) {
       };
     }, []);
 
+    const { theme } = useThemeStore();
     return (
-      <section id={windowKey} ref={ref} style={{ zIndex }} className="absolute">
+      <section
+        id={windowKey}
+        ref={ref}
+        style={{ zIndex }}
+        className={
+          "absolute transition-colors duration-400 " +
+          (theme === "dark" ? "bg-zinc-700" : "bg-white")
+        }
+      >
         <Component {...props} />
       </section>
     );

@@ -6,6 +6,7 @@ import gsap from "gsap";
 import { useRef } from "react";
 import { Tooltip } from "react-tooltip";
 import { locations } from "@/constants";
+import useThemeStore from "@/store/theme";
 
 export default function Dock() {
   const dockRef = useRef(null);
@@ -120,9 +121,17 @@ export default function Dock() {
       canOpen: true,
     },
   ];
+
+  const { theme } = useThemeStore();
+
   return (
     <section id="dock">
-      <div ref={dockRef} className="dock-container">
+      <div
+        ref={dockRef}
+        className={`dock-container ${
+          theme === "dark" ? "bg-black/50" : "bg-white/50"
+        } transition-colors duration-400`}
+      >
         {dockApps.map(({ id, name, icon, canOpen }) => (
           <div key={id ?? name} className="relative flex justify-center">
             <button

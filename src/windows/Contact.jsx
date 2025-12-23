@@ -2,11 +2,21 @@ import WindowControls from "@/components/WindowControls";
 import WindowWrapper from "@/hoc/WindowWrapper";
 import { socials } from "@/constants";
 import { getAssetPath } from "@/utils/helpers";
+import useThemeStore from "@/store/theme";
 
 function Contact() {
+  const { theme } = useThemeStore();
   return (
     <>
-      <div id="window-header">
+      <div
+        id="window-header"
+        className={
+          (theme === "dark"
+            ? "bg-zinc-600 border-b border-zinc-600"
+            : "bg-white border-b border-zinc-200") +
+          " transition-colors duration-400"
+        }
+      >
         <WindowControls target="contacts" />
         <h2>Contact</h2>
       </div>
@@ -17,8 +27,23 @@ function Contact() {
           className="rounded-full w-20 h-20"
         />
 
-        <h3>Hey!! Let's Connect..</h3>
-        <p>
+        <h3
+          className={
+            (theme === "dark"
+              ? "font-fira tracking-wider text-white"
+              : "font-fira tracking-wider text-black") +
+            " transition-colors duration-400"
+          }
+        >
+          Hey!! Let's Connect..
+        </h3>
+        <p
+          className={
+            (theme === "dark"
+              ? "font-fira text-white"
+              : "font-fira text-gray-800") + " transition-colors duration-400"
+          }
+        >
           Building something? Breaking something? Curious about something? Let’s
           chat.
         </p>
